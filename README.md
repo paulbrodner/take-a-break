@@ -11,3 +11,7 @@ python -m pip install take_a_break
 ```shell script
 python -m take_a_break
 ```
+
+# thank you
+>[handdrawngoods](http://handdrawngoods.com) for free [icon.ico](https://icon-icons.com/icon/coffe-cup/87565) 
+>[unsplash](https://unsplash.com/) for free images

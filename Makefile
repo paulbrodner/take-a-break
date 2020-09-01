@@ -2,7 +2,7 @@
 
 REPOSITORY:=testpypi
 
-build: clean
+build: test clean
 	python setup.py sdist bdist_wheel
 
 clean:
