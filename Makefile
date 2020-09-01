@@ -14,5 +14,8 @@ upload:
 dev:
 	pip install --upgrade setuptools wheel twine
 
+install:
+	pip install .
+
 test:
-	python -m take-a-break
+	pytest

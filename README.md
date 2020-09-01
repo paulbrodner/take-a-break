@@ -3,11 +3,11 @@
 > a small python application that will remind me to take breaks>
 
 # installation
-```
-python -m pip install take-a-break
+```shell script
+python -m pip install take_a_break
 ```
 
 # usage
-```
-python take-a-break
+```shell script
+python -m take_a_break
 ```

@@ -1,4 +1,5 @@
 import setuptools
+
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
@@ -9,6 +10,10 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     long_description=long_description,
     url="https://github.com/paulbrodner/take-a-break",
+    project_urls={
+        'Source': 'https://github.com/paulbrodner/take-a-break',
+        'Tracker': 'https://github.com/paulbrodner/take-a-break/issues',
+    },
     packages=setuptools.find_packages(),
     classifiers=[
         "Development Status :: 1 - Planning",
