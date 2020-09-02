@@ -7,9 +7,21 @@ from PIL import Image
 
 
 def get_resources(filename):
+    """
+    :param filename: the name of the filname
+    :return: the filename path from resources folder
+    """
     dirname = os.path.join(os.path.dirname(__file__), 'resources')
     fullname = os.path.join(dirname, filename)
     return fullname
+
+
+def temp_file(filename):
+    """
+    :param filename:
+    :return: the filename path from the TEMP folder
+    """
+    pass
 
 
 def get_random_joke():
