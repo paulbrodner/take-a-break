@@ -15,7 +15,8 @@ dev:
 	pip install --upgrade setuptools wheel twine
 
 install:
-	pip install .
+	python setup.py develop
+	#pip install .
 
 test:
 	pytest

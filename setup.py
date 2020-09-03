@@ -19,6 +19,10 @@ setuptools.setup(
     },
     packages=setuptools.find_packages(),
     package_data={'take_a_break': files},
+    install_requires=[
+        'requests',
+        'Pillow'
+    ],
     classifiers=[
         "Development Status :: 1 - Planning",
         "Programming Language :: Python :: 3",
