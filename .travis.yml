@@ -15,5 +15,3 @@ jobs:
       provider: script
       script:
         make build upload;
-      on:
-       branch: dev
