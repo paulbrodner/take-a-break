@@ -7,4 +7,4 @@ install:
 script: make
 
 after_script:
-  - if [ "$TRAVIS_BRANCH" == "develop" ]; then make upload; fi
+  - $TRAVIS_BRANCH == "develop" && export REPOSITORY=pypi && make upload
