@@ -3,11 +3,8 @@ python:
   - "3.8"
 install:
   - pip install -r requirements.txt
-jobs:
-  include:
-    - name: build
-      script: make build test
-    - name: deploy
-      if: branch = develop
-      env: REPOSITORY=pypi
-      script: make upload
+
+script: make
+
+after_script:
+  - if [ $TRAVIS_BRANCH = 'develop' ]; make upload; fi
