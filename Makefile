@@ -2,7 +2,7 @@
 
 REPOSITORY:=testpypi
 
-build: clean
+build: test clean
 	python setup.py sdist bdist_wheel
 
 clean:
@@ -14,5 +14,8 @@ upload:
 dev:
 	pip install --upgrade setuptools wheel twine
 
+install:
+	python setup.py develop && pip install .
+
 test:
-	python -m take-a-break
+	pytest
