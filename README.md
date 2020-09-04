@@ -9,7 +9,7 @@
 
 # installation
 ```shell script
-python -m pip install take_a_break
+pip install take-a-break
 ```
 
 # usage
@@ -19,5 +19,8 @@ python -m take_a_break
 > the application will remain opened in console and will be displayed a nofification after x minutes
 
 # thank you
->[handdrawngoods](http://handdrawngoods.com) for free [icon.ico](https://icon-icons.com/icon/coffe-cup/87565) 
->[unsplash](https://unsplash.com/) for free images
+>* [handdrawngoods](http://handdrawngoods.com) for free [icon.ico](https://icon-icons.com/icon/coffe-cup/87565) 
+
+>* [icndb.com](http://www.icndb.com/) for funny jokes
+
+>* [unsplash](https://unsplash.com/) for free images
