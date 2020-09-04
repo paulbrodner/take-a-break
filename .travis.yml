@@ -1,10 +1,14 @@
 language: python
 python:
-  - "3.8"
+- '3.8'
 install:
-  - pip install -r requirements.txt
-  - make install
+- pip install -r requirements.txt
+- make install
 script: make
-
-after_script:
-  - if [ "$TRAVIS_BRANCH" == "develop" ]; then make upload; fi
+deploy:
+  provider: pypi
+  username: __token__
+  password:
+    secure: GHa5nKuWCVeSn/CvemLGzL15R7UICJhz/Nky9K3OIuRzv0IxDYuk/CmJsGDBUeS4xXuAWdcH0oT0VNv8WFjL1H+II3AoXnJB0ykzhMYyTqx3wJX5Xk0yzmYMdNihK+a8HcyBWonS59Vw3aEO7zKKf8zo8x6eWBGkUbySCqh7NgZPkpH7lbdwvlVzofB0F/b3yYonuvnVMeBQGwN6VMTzxPA0LFTLxq8+g/fpqMK4eIN+VsLdo8T3bgpwgwwtkPouvBWe1hRh58d0V9MgjkN4ExiShnZpmudY9JFrrkUPKrVtoDLf6pk9xbH+0lkU1peM5FETMrmCedpbbAIr4K2nsVvPRELFPrJ5IJgcBk/5FveOVKYmi5PoX4z/krtOg9+vnjgs0dWRaaD7HjIdvEZHqmYVC1Ot0+f4AaZYrpnBh08ZpjthMs2+ejPBdHoZ1Onm65KjuTkIM5GrVcvygiALZss5eIw94hkvowcSjvbHJCQaA4vVTGPCIUtgzI2sOaoAoe56PCIk+4pWKQHfu6Ff9qOI3vTiX4wdL6O4PxIyR8p4R70DbYA80KmEfy6b6ZZWP4DK3RZ23005nGZ2/Xiox+rPDbij5y6jG2jOkduFl63SIn57ohHkRfaZ2/JvCECTSY/EoUezFFwSes1gA/jQW6/nSAkEoduNAtnJpmjVlhI=
+  on:
+    branch: develop
