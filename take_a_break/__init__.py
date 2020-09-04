@@ -1,4 +1,4 @@
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 
 import os
 
@@ -25,7 +25,7 @@ def temp_file(filename):
 
 
 def get_random_joke():
-    response = requests.get("http://api.icndb.com/jokes/random")
+    response = requests.get("http://api.icndb.com/jokes/random", verify=False)
     if response.status_code == requests.codes.ok:
         joke = response.json()["value"]["joke"]
         print(joke)
