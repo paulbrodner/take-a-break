@@ -8,4 +8,4 @@ script: make
 
 after_script:
   - echo ${TRAVIS_BRANCH}
-  - if [ "$TRAVIS_BRANCH" == "develop" ]; then export REPOSITORY=pypi && make upload fi
+  - if [ "$TRAVIS_BRANCH" == "develop" ]; export REPOSITORY=pypi && make upload fi
