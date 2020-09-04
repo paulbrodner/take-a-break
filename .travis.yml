@@ -6,12 +6,5 @@ install:
   - make install
 script: make
 
-jobs:
-  include:
-  - if: branch = "develop"
-    env:
-     - REPOSITORY=pypi
-    deploy:
-      provider: script
-      script:
-        make build upload;
+after_script:
+  - if [ "$TRAVIS_BRANCH" == "develop" ]; then make upload; fi
