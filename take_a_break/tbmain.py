@@ -3,7 +3,7 @@ from time import sleep
 
 from take_a_break import get_resources, get_random_joke
 from take_a_break.configuration import CONFIG
-from take_a_break.gui.tbmenu import TBMenu
+from take_a_break.tbmenu import TBMenu
 from take_a_break.providers.unsplash_api import UnsplashAPI
 
 

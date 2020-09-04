@@ -1,7 +1,7 @@
 from tkinter import Menu
 from tkinter.messagebox import showinfo
 
-from take_a_break.gui.tbsettings import TBSettings
+from take_a_break.tbsettings import TBSettings
 
 
 class TBMenu(object):
