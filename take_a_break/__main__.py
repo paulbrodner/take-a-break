@@ -3,7 +3,7 @@ import sys
 import time
 
 from take_a_break.configuration import CONFIG
-from take_a_break.gui.tbmain import TBMain
+from take_a_break.tbmain import TBMain
 
 logging.basicConfig(level=logging.DEBUG,
                     format='(%(threadName)-9s) %(message)s', )
