@@ -4,6 +4,8 @@ from take_a_break.configuration import CONFIG
 
 
 class TBSettings(object):
+    load_resources = False;
+
     def __init__(self, parent):
         self._parent = parent
         self._dialog = tk.Tk()
@@ -12,7 +14,7 @@ class TBSettings(object):
         # self._dialog.minsize(400, 100)
         self._dialog.focus_force()
 
-        canvas1 = tk.Canvas(self._dialog, width=400, height=150)
+        canvas1 = tk.Canvas(self._dialog, width=400, height=180)
         canvas1.pack()
 
         label1 = tk.Label(self._dialog, text="Unsplash Random URL:")
@@ -29,10 +31,24 @@ class TBSettings(object):
         self.reminder.insert(0, CONFIG.data["default"]["remind_me_after_these_minutes"])
         canvas1.create_window(73, 100, window=self.reminder)
 
+        label2 = tk.Label(self._dialog, text="Remind me to take a break in (minutes):")
+        canvas1.create_window(115, 80, window=label2)
+
+        self.load_resources = CONFIG.load_resources_from_internet()
+        self.cbx_load_resources = tk.Checkbutton(self._dialog, text="Load resources from internet ?",
+                                                 command=self.check, variable=1)
+        if self.load_resources:
+            self.cbx_load_resources.select()
+        canvas1.create_window(100, 130, window=self.cbx_load_resources)
+
         button1 = tk.Button(master=self._dialog, text='Save', command=self._save_settings)
-        canvas1.create_window(28, 130, window=button1)
+        canvas1.create_window(370, 160, window=button1)
+
+    def check(self):
+        self.load_resources = not self.load_resources
 
     def _save_settings(self):
+        CONFIG.data["default"]["load_resources_from_internet"] = str(self.load_resources)
         CONFIG.data["default"]["remind_me_after_these_minutes"] = self.reminder.get()
         CONFIG.data["unsplash.com"]["url"] = self.unsplash_provider.get()
         CONFIG.save()
