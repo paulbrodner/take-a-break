@@ -1,9 +1,12 @@
 __version__ = "1.0.1"
 
 import os
+import ssl
 
 import requests
 from PIL import Image
+
+ssl._create_default_https_context = ssl._create_unverified_context
 
 
 def get_resources(filename):
