@@ -30,5 +30,5 @@ setuptools.setup(
         "Topic :: Utilities",
         "Operating System :: OS Independent",
     ],
-    python_requires='>=3.7',
+    python_requires='>=3.7.5',
 )

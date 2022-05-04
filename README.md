@@ -8,7 +8,7 @@
 > i've built this app just to learn how to build a python package from scratch, how to version control it, test it and release it to [pypi.org](https://pypi.org/project/take-a-break/) using [travis-ci.org](https://travis-ci.org/)
 
 # prerequisites
-- [x] python 3.8 or greater
+- [x] python 3.7.5 or greater
 
 # installation
 
